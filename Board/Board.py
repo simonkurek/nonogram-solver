@@ -1,3 +1,6 @@
+from Utils.BoardEnum import BoardEnum
+
+
 class Board:
     def __init__(self, board):
         self.__board = board
@@ -10,13 +13,13 @@ class Board:
         result_str = ""
         for row in self.__board:
             for col in row:
-                result_str += str(col) + " "
+                result_str += str(col)
             result_str += "\n"
         return result_str
 
     def fill_entry(self, type_of_entry: str, which_entry: int, with_values: list = []):
         if len(with_values) == 0:
-            with_values = ['x'] * self.size
+            with_values = [BoardEnum.FILL] * self.size
         if type_of_entry == 'row':
             self.fill_row(which_entry, with_values)
         elif type_of_entry == 'col':

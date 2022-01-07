@@ -37,9 +37,9 @@ class Solver(ISolver):
                     data = []
                     for value in entry:
                         for _ in range(value):
-                            data.append('x')
+                            data.append(BoardInfo.FILL)
                         if value != entry[-1]:
-                            data.append('o')
+                            data.append(BoardInfo.BLOCK)
                     board.fill_entry(
                         self.__ent_enum.get_entries_types_names()[tidx], i, data)
         return board

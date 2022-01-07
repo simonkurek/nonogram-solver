@@ -1,4 +1,5 @@
 from Board.Board import Board
+from Utils.BoardEnum import BoardEnum
 
 
 class BoardBuilder:
@@ -16,5 +17,5 @@ class BoardBuilder:
         for i in range(self.size):
             board.append([])
             for _ in range(self.size):
-                board[i].append('o')
+                board[i].append(BoardEnum.EMPTY)
         return Board(board)
