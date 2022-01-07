@@ -2,6 +2,7 @@ from Board.Board import Board
 from BoardInfo.BoardInfo import BoardInfo
 from Solver.ISolver import ISolver
 from Solver.Utils.EntriesEnumarate import EntriesEnumarate
+from Utils.BoardEnum import BoardEnum
 
 
 class Solver(ISolver):
@@ -37,9 +38,9 @@ class Solver(ISolver):
                     data = []
                     for value in entry:
                         for _ in range(value):
-                            data.append(BoardInfo.FILL)
+                            data.append(BoardEnum.FILL)
                         if value != entry[-1]:
-                            data.append(BoardInfo.BLOCK)
+                            data.append(BoardEnum.BLOCK)
                     board.fill_entry(
                         self.__ent_enum.get_entries_types_names()[tidx], i, data)
         return board
