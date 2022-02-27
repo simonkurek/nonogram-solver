@@ -28,10 +28,9 @@ def fabric_simple_8_square_board() -> BoardInfo:
     return BoardInfoBuilder() \
         .create() \
         .with_size(8) \
-        .with_columns([[1], [3], [4, 3], [8], [8], [4, 3], [3], [1]]) \
+        .with_columns([[1], [3], [5, 1], [8], [8], [5, 1], [3], [1]]) \
         .with_rows([[2], [4], [4], [6], [6], [8], [2], [4]]) \
         .build()
-    # .with_columns([[1], [3], [5, 1], [8], [8], [5, 1], [3], [1]]) \
 
 
 def run():
